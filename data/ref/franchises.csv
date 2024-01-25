@@ -1,0 +1,3 @@
+franchise,label,places_measure,calls_per_rep_day,field_days,patient_label
+diabetes,Diabetes (oral therapy sold to primary care and endocrinology),DIABETES,8,190,adults with diagnosed diabetes
+oncology,Oncology (specialist sale to oncologists),CANCER,4,190,adults with a cancer diagnosis (excluding skin cancer)

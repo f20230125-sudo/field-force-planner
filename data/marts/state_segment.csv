@@ -1,0 +1,205 @@
+state,franchise,segment,tier,hcps,calls_per_year,targeted_share
+AK,diabetes,Endocrinology,specialist,10,24.0,0.6
+AK,diabetes,Primary care NP or PA,generalist,1676,6.0,0.25
+AK,diabetes,Primary care physician,generalist,943,12.0,0.25
+AK,oncology,Oncology specialist,specialist,45,18.0,0.6
+AL,diabetes,Endocrinology,specialist,89,24.0,0.6
+AL,diabetes,Primary care NP or PA,generalist,7997,6.0,0.25
+AL,diabetes,Primary care physician,generalist,3911,12.0,0.25
+AL,oncology,Oncology specialist,specialist,396,18.0,0.6
+AR,diabetes,Endocrinology,specialist,58,24.0,0.6
+AR,diabetes,Primary care NP or PA,generalist,4666,6.0,0.25
+AR,diabetes,Primary care physician,generalist,2619,12.0,0.25
+AR,oncology,Oncology specialist,specialist,215,18.0,0.6
+AZ,diabetes,Endocrinology,specialist,175,24.0,0.6
+AZ,diabetes,Primary care NP or PA,generalist,13101,6.0,0.25
+AZ,diabetes,Primary care physician,generalist,6394,12.0,0.25
+AZ,oncology,Oncology specialist,specialist,622,18.0,0.6
+CA,diabetes,Endocrinology,specialist,1109,24.0,0.6
+CA,diabetes,Primary care NP or PA,generalist,46219,6.0,0.25
+CA,diabetes,Primary care physician,generalist,37760,12.0,0.25
+CA,oncology,Oncology specialist,specialist,3477,18.0,0.6
+CO,diabetes,Endocrinology,specialist,147,24.0,0.6
+CO,diabetes,Primary care NP or PA,generalist,10951,6.0,0.25
+CO,diabetes,Primary care physician,generalist,6093,12.0,0.25
+CO,oncology,Oncology specialist,specialist,588,18.0,0.6
+CT,diabetes,Endocrinology,specialist,191,24.0,0.6
+CT,diabetes,Primary care NP or PA,generalist,7191,6.0,0.25
+CT,diabetes,Primary care physician,generalist,3537,12.0,0.25
+CT,oncology,Oncology specialist,specialist,433,18.0,0.6
+DC,diabetes,Endocrinology,specialist,52,24.0,0.6
+DC,diabetes,Primary care NP or PA,generalist,1691,6.0,0.25
+DC,diabetes,Primary care physician,generalist,1122,12.0,0.25
+DC,oncology,Oncology specialist,specialist,202,18.0,0.6
+DE,diabetes,Endocrinology,specialist,31,24.0,0.6
+DE,diabetes,Primary care NP or PA,generalist,1934,6.0,0.25
+DE,diabetes,Primary care physician,generalist,1024,12.0,0.25
+DE,oncology,Oncology specialist,specialist,100,18.0,0.6
+FL,diabetes,Endocrinology,specialist,667,24.0,0.6
+FL,diabetes,Primary care NP or PA,generalist,50281,6.0,0.25
+FL,diabetes,Primary care physician,generalist,22777,12.0,0.25
+FL,oncology,Oncology specialist,specialist,2359,18.0,0.6
+GA,diabetes,Endocrinology,specialist,251,24.0,0.6
+GA,diabetes,Primary care NP or PA,generalist,19326,6.0,0.25
+GA,diabetes,Primary care physician,generalist,8373,12.0,0.25
+GA,oncology,Oncology specialist,specialist,866,18.0,0.6
+HI,diabetes,Endocrinology,specialist,26,24.0,0.6
+HI,diabetes,Primary care NP or PA,generalist,1666,6.0,0.25
+HI,diabetes,Primary care physician,generalist,1885,12.0,0.25
+HI,oncology,Oncology specialist,specialist,114,18.0,0.6
+IA,diabetes,Endocrinology,specialist,53,24.0,0.6
+IA,diabetes,Primary care NP or PA,generalist,5320,6.0,0.25
+IA,diabetes,Primary care physician,generalist,3260,12.0,0.25
+IA,oncology,Oncology specialist,specialist,280,18.0,0.6
+ID,diabetes,Endocrinology,specialist,22,24.0,0.6
+ID,diabetes,Primary care NP or PA,generalist,3630,6.0,0.25
+ID,diabetes,Primary care physician,generalist,1821,12.0,0.25
+ID,oncology,Oncology specialist,specialist,103,18.0,0.6
+IL,diabetes,Endocrinology,specialist,437,24.0,0.6
+IL,diabetes,Primary care NP or PA,generalist,19414,6.0,0.25
+IL,diabetes,Primary care physician,generalist,13875,12.0,0.25
+IL,oncology,Oncology specialist,specialist,1372,18.0,0.6
+IN,diabetes,Endocrinology,specialist,181,24.0,0.6
+IN,diabetes,Primary care NP or PA,generalist,12454,6.0,0.25
+IN,diabetes,Primary care physician,generalist,5883,12.0,0.25
+IN,oncology,Oncology specialist,specialist,581,18.0,0.6
+KS,diabetes,Endocrinology,specialist,64,24.0,0.6
+KS,diabetes,Primary care NP or PA,generalist,5714,6.0,0.25
+KS,diabetes,Primary care physician,generalist,3112,12.0,0.25
+KS,oncology,Oncology specialist,specialist,246,18.0,0.6
+KY,diabetes,Endocrinology,specialist,105,24.0,0.6
+KY,diabetes,Primary care NP or PA,generalist,9969,6.0,0.25
+KY,diabetes,Primary care physician,generalist,3602,12.0,0.25
+KY,oncology,Oncology specialist,specialist,381,18.0,0.6
+LA,diabetes,Endocrinology,specialist,108,24.0,0.6
+LA,diabetes,Primary care NP or PA,generalist,7821,6.0,0.25
+LA,diabetes,Primary care physician,generalist,3696,12.0,0.25
+LA,oncology,Oncology specialist,specialist,354,18.0,0.6
+MA,diabetes,Endocrinology,specialist,474,24.0,0.6
+MA,diabetes,Primary care NP or PA,generalist,15137,6.0,0.25
+MA,diabetes,Primary care physician,generalist,9249,12.0,0.25
+MA,oncology,Oncology specialist,specialist,1339,18.0,0.6
+MD,diabetes,Endocrinology,specialist,311,24.0,0.6
+MD,diabetes,Primary care NP or PA,generalist,10987,6.0,0.25
+MD,diabetes,Primary care physician,generalist,6438,12.0,0.25
+MD,oncology,Oncology specialist,specialist,838,18.0,0.6
+ME,diabetes,Endocrinology,specialist,28,24.0,0.6
+ME,diabetes,Primary care NP or PA,generalist,3171,6.0,0.25
+ME,diabetes,Primary care physician,generalist,1868,12.0,0.25
+ME,oncology,Oncology specialist,specialist,154,18.0,0.6
+MI,diabetes,Endocrinology,specialist,273,24.0,0.6
+MI,diabetes,Primary care NP or PA,generalist,18911,6.0,0.25
+MI,diabetes,Primary care physician,generalist,12347,12.0,0.25
+MI,oncology,Oncology specialist,specialist,940,18.0,0.6
+MN,diabetes,Endocrinology,specialist,202,24.0,0.6
+MN,diabetes,Primary care NP or PA,generalist,11636,6.0,0.25
+MN,diabetes,Primary care physician,generalist,6810,12.0,0.25
+MN,oncology,Oncology specialist,specialist,725,18.0,0.6
+MO,diabetes,Endocrinology,specialist,188,24.0,0.6
+MO,diabetes,Primary care NP or PA,generalist,10127,6.0,0.25
+MO,diabetes,Primary care physician,generalist,5791,12.0,0.25
+MO,oncology,Oncology specialist,specialist,665,18.0,0.6
+MS,diabetes,Endocrinology,specialist,55,24.0,0.6
+MS,diabetes,Primary care NP or PA,generalist,5644,6.0,0.25
+MS,diabetes,Primary care physician,generalist,2247,12.0,0.25
+MS,oncology,Oncology specialist,specialist,148,18.0,0.6
+MT,diabetes,Endocrinology,specialist,23,24.0,0.6
+MT,diabetes,Primary care NP or PA,generalist,2201,6.0,0.25
+MT,diabetes,Primary care physician,generalist,1151,12.0,0.25
+MT,oncology,Oncology specialist,specialist,89,18.0,0.6
+NC,diabetes,Endocrinology,specialist,244,24.0,0.6
+NC,diabetes,Primary care NP or PA,generalist,22720,6.0,0.25
+NC,diabetes,Primary care physician,generalist,9199,12.0,0.25
+NC,oncology,Oncology specialist,specialist,860,18.0,0.6
+ND,diabetes,Endocrinology,specialist,17,24.0,0.6
+ND,diabetes,Primary care NP or PA,generalist,1855,6.0,0.25
+ND,diabetes,Primary care physician,generalist,858,12.0,0.25
+ND,oncology,Oncology specialist,specialist,83,18.0,0.6
+NE,diabetes,Endocrinology,specialist,29,24.0,0.6
+NE,diabetes,Primary care NP or PA,generalist,3619,6.0,0.25
+NE,diabetes,Primary care physician,generalist,1761,12.0,0.25
+NE,oncology,Oncology specialist,specialist,105,18.0,0.6
+NH,diabetes,Endocrinology,specialist,45,24.0,0.6
+NH,diabetes,Primary care NP or PA,generalist,2853,6.0,0.25
+NH,diabetes,Primary care physician,generalist,1387,12.0,0.25
+NH,oncology,Oncology specialist,specialist,86,18.0,0.6
+NJ,diabetes,Endocrinology,specialist,427,24.0,0.6
+NJ,diabetes,Primary care NP or PA,generalist,12785,6.0,0.25
+NJ,diabetes,Primary care physician,generalist,8000,12.0,0.25
+NJ,oncology,Oncology specialist,specialist,878,18.0,0.6
+NM,diabetes,Endocrinology,specialist,38,24.0,0.6
+NM,diabetes,Primary care NP or PA,generalist,3460,6.0,0.25
+NM,diabetes,Primary care physician,generalist,2029,12.0,0.25
+NM,oncology,Oncology specialist,specialist,119,18.0,0.6
+NV,diabetes,Endocrinology,specialist,77,24.0,0.6
+NV,diabetes,Primary care NP or PA,generalist,4823,6.0,0.25
+NV,diabetes,Primary care physician,generalist,2619,12.0,0.25
+NV,oncology,Oncology specialist,specialist,194,18.0,0.6
+NY,diabetes,Endocrinology,specialist,981,24.0,0.6
+NY,diabetes,Primary care NP or PA,generalist,44154,6.0,0.25
+NY,diabetes,Primary care physician,generalist,20015,12.0,0.25
+NY,oncology,Oncology specialist,specialist,2782,18.0,0.6
+OH,diabetes,Endocrinology,specialist,308,24.0,0.6
+OH,diabetes,Primary care NP or PA,generalist,21804,6.0,0.25
+OH,diabetes,Primary care physician,generalist,10982,12.0,0.25
+OH,oncology,Oncology specialist,specialist,1172,18.0,0.6
+OK,diabetes,Endocrinology,specialist,73,24.0,0.6
+OK,diabetes,Primary care NP or PA,generalist,6173,6.0,0.25
+OK,diabetes,Primary care physician,generalist,3617,12.0,0.25
+OK,oncology,Oncology specialist,specialist,262,18.0,0.6
+OR,diabetes,Endocrinology,specialist,104,24.0,0.6
+OR,diabetes,Primary care NP or PA,generalist,6378,6.0,0.25
+OR,diabetes,Primary care physician,generalist,5198,12.0,0.25
+OR,oncology,Oncology specialist,specialist,446,18.0,0.6
+PA,diabetes,Endocrinology,specialist,478,24.0,0.6
+PA,diabetes,Primary care NP or PA,generalist,25467,6.0,0.25
+PA,diabetes,Primary care physician,generalist,15412,12.0,0.25
+PA,oncology,Oncology specialist,specialist,1822,18.0,0.6
+RI,diabetes,Endocrinology,specialist,37,24.0,0.6
+RI,diabetes,Primary care NP or PA,generalist,2252,6.0,0.25
+RI,diabetes,Primary care physician,generalist,1575,12.0,0.25
+RI,oncology,Oncology specialist,specialist,163,18.0,0.6
+SC,diabetes,Endocrinology,specialist,109,24.0,0.6
+SC,diabetes,Primary care NP or PA,generalist,9260,6.0,0.25
+SC,diabetes,Primary care physician,generalist,4815,12.0,0.25
+SC,oncology,Oncology specialist,specialist,378,18.0,0.6
+SD,diabetes,Endocrinology,specialist,25,24.0,0.6
+SD,diabetes,Primary care NP or PA,generalist,2175,6.0,0.25
+SD,diabetes,Primary care physician,generalist,892,12.0,0.25
+SD,oncology,Oncology specialist,specialist,67,18.0,0.6
+TN,diabetes,Endocrinology,specialist,150,24.0,0.6
+TN,diabetes,Primary care NP or PA,generalist,16431,6.0,0.25
+TN,diabetes,Primary care physician,generalist,5586,12.0,0.25
+TN,oncology,Oncology specialist,specialist,792,18.0,0.6
+TX,diabetes,Endocrinology,specialist,731,24.0,0.6
+TX,diabetes,Primary care NP or PA,generalist,42218,6.0,0.25
+TX,diabetes,Primary care physician,generalist,21697,12.0,0.25
+TX,oncology,Oncology specialist,specialist,2585,18.0,0.6
+UT,diabetes,Endocrinology,specialist,46,24.0,0.6
+UT,diabetes,Primary care NP or PA,generalist,5538,6.0,0.25
+UT,diabetes,Primary care physician,generalist,2010,12.0,0.25
+UT,oncology,Oncology specialist,specialist,226,18.0,0.6
+VA,diabetes,Endocrinology,specialist,263,24.0,0.6
+VA,diabetes,Primary care NP or PA,generalist,14615,6.0,0.25
+VA,diabetes,Primary care physician,generalist,8312,12.0,0.25
+VA,oncology,Oncology specialist,specialist,727,18.0,0.6
+VT,diabetes,Endocrinology,specialist,19,24.0,0.6
+VT,diabetes,Primary care NP or PA,generalist,1189,6.0,0.25
+VT,diabetes,Primary care physician,generalist,817,12.0,0.25
+VT,oncology,Oncology specialist,specialist,73,18.0,0.6
+WA,diabetes,Endocrinology,specialist,217,24.0,0.6
+WA,diabetes,Primary care NP or PA,generalist,11650,6.0,0.25
+WA,diabetes,Primary care physician,generalist,8951,12.0,0.25
+WA,oncology,Oncology specialist,specialist,1024,18.0,0.6
+WI,diabetes,Endocrinology,specialist,190,24.0,0.6
+WI,diabetes,Primary care NP or PA,generalist,11744,6.0,0.25
+WI,diabetes,Primary care physician,generalist,6114,12.0,0.25
+WI,oncology,Oncology specialist,specialist,673,18.0,0.6
+WV,diabetes,Endocrinology,specialist,63,24.0,0.6
+WV,diabetes,Primary care NP or PA,generalist,4301,6.0,0.25
+WV,diabetes,Primary care physician,generalist,2018,12.0,0.25
+WV,oncology,Oncology specialist,specialist,152,18.0,0.6
+WY,diabetes,Endocrinology,specialist,3,24.0,0.6
+WY,diabetes,Primary care NP or PA,generalist,952,6.0,0.25
+WY,diabetes,Primary care physician,generalist,542,12.0,0.25
+WY,oncology,Oncology specialist,specialist,24,18.0,0.6
