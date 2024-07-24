@@ -14,7 +14,9 @@ import {
   topShare,
   type Plan,
 } from "@/lib/derive";
-import { MapShapes, franchiseKeys, type Dataset, type Franchise, type MapData } from "@/lib/schema";
+import { franchiseKeys, type Franchise } from "@/lib/franchises";
+import { parseCut, parseMapData } from "@/lib/mapData";
+import type { Dataset, MapData } from "@/lib/schema";
 import { int, longDate, pct, reps, rho } from "@/lib/format";
 import { Glyph, ProfileChart, RealityCheck, RepRuler, StateLedger, Waterfall } from "./Charts";
 import { Frame, useView } from "./chart";
@@ -666,12 +668,25 @@ export function Report({ data: d, repoUrl }: { data: Dataset; repoUrl?: string }
     let live = true;
     fetch("/data/map.json")
       .then((res) => res.json())
-      .then((j) => live && setMap(MapShapes.parse(j) as MapData))
+      .then((j) => live && setMap(parseMapData(j)))
       .catch(() => undefined);
     return () => {
       live = false;
     };
   }, []);
+  // The oncology cut lines are a separate file; fetch them the first time oncology is chosen.
+  const needCut = map != null && franchise === "oncology" && map.cut.oncology === undefined;
+  useEffect(() => {
+    if (!needCut) return;
+    let live = true;
+    fetch("/data/cut-oncology.json")
+      .then((res) => res.json())
+      .then((j) => live && setMap((m) => (m ? { ...m, cut: { ...m.cut, oncology: parseCut(j) } } : m)))
+      .catch(() => undefined);
+    return () => {
+      live = false;
+    };
+  }, [needCut]);
   const h = d.headline;
   const dia = h.franchises.diabetes;
   const onc = h.franchises.oncology;

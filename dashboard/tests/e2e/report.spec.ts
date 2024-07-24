@@ -44,6 +44,22 @@ test.describe("the report", () => {
     await expect(page.locator(".key")).toContainText("343 counties are cut between territories");
   });
 
+  test("the oncology cut lines are fetched only when oncology is chosen", async ({ page }) => {
+    const fetched: string[] = [];
+    page.on("request", (r) => r.url().includes("cut-oncology") && fetched.push(r.url()));
+    await page.goto("/");
+    await mapReady(page);
+    await expect(page.locator("#map svg path.cut")).toHaveAttribute("d", /^M/);
+    expect(fetched).toEqual([]);
+    await page.locator("#map .seg button", { hasText: "Oncology" }).click();
+    await expect(page.locator("#map h3")).toContainText("474 oncology territories");
+    await expect.poll(() => fetched.length).toBe(1);
+    await expect(page.locator("#map svg path.cut")).toHaveAttribute("d", /^M/);
+    await page.locator("#map .seg button", { hasText: "Diabetes" }).click();
+    await page.locator("#map .seg button", { hasText: "Oncology" }).click();
+    expect(fetched).toHaveLength(1); // fetched once, kept
+  });
+
   test("the state zoom changes the view and a county can be read in words", async ({ page }) => {
     await page.goto("/");
     await mapReady(page);
