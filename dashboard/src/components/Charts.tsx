@@ -6,6 +6,9 @@ import { profile, tickCount, type LedgerRow, type Step } from "@/lib/derive";
 import { int, rho } from "@/lib/format";
 import { useWidth } from "./chart";
 
+/** Two decimals is a hundredth of a pixel: invisible, and it keeps thousands of tick coordinates short in the HTML. */
+const px = (n: number) => Math.round(n * 100) / 100;
+
 // ------------------------------------------------------------------------------------------ the rep ruler
 
 /**
@@ -32,7 +35,7 @@ export function RepRuler({ reps, perRow, label, animate = false }: { reps: numbe
   const ticks = [];
   for (let i = 0; i < n; i++) {
     const row = Math.floor(i / per);
-    const x = (i % per) * pitch + pitch / 2;
+    const x = px((i % per) * pitch + pitch / 2);
     const hundred = (i + 1) % 100 === 0;
     const y0 = row * rowH + 18 + (hundred ? 0 : 6);
     const isNew = animate && i >= first && n > from;
@@ -87,12 +90,12 @@ export function StateLedger({ rows, label }: { rows: LedgerRow[]; label: string 
                 {narrow ? r.state : r.name}
               </text>
               {Array.from({ length: r.whole }, (_, k) => (
-                <line key={k} className="tk" x1={x0 + k * pitch} x2={x0 + k * pitch} y1={y + 20} y2={y + 4} strokeWidth={Math.min(2, pitch * 0.66)} />
+                <line key={k} className="tk" x1={px(x0 + k * pitch)} x2={px(x0 + k * pitch)} y1={y + 20} y2={y + 4} strokeWidth={px(Math.min(2, pitch * 0.66))} />
               ))}
               {r.fraction > 0.02 && (
-                <line className="tk" x1={x0 + r.whole * pitch} x2={x0 + r.whole * pitch} y1={y + 20} y2={y + 20 - 16 * r.fraction} strokeWidth={Math.min(2, pitch * 0.66)} />
+                <line className="tk" x1={px(x0 + r.whole * pitch)} x2={px(x0 + r.whole * pitch)} y1={y + 20} y2={px(y + 20 - 16 * r.fraction)} strokeWidth={px(Math.min(2, pitch * 0.66))} />
               )}
-              <text className="t-strong" x={x0 + (r.whole + 1) * pitch + 8} y={y + 16}>
+              <text className="t-strong" x={px(x0 + (r.whole + 1) * pitch + 8)} y={y + 16}>
                 {r.reps.toFixed(1)}
               </text>
             </g>
@@ -156,7 +159,7 @@ export function ProfileChart({
             1.00
           </text>
           {p.sorted.map((w, i) => (
-            <line key={i} className={tone === "ink" ? "prof" : "prof-3"} x1={x(i)} x2={x(i)} y1={ih} y2={y(Math.min(w, 2))} />
+            <line key={i} className={tone === "ink" ? "prof" : "prof-3"} x1={px(x(i))} x2={px(x(i))} y1={ih} y2={px(y(Math.min(w, 2)))} />
           ))}
           <text className="t-mute" x={4} y={y(1.25) - 5}>
             within 25% of the target
