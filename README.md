@@ -48,10 +48,10 @@ python -m ff.align              # alignment for both franchises
 python -m ff.validate           # reality check against Rx Market Pulse
 python -m ff.dq                 # scorecard
 python -m ff.export_json        # JSON for the site
-python -m ff.workbook           # Excel model
+python -m ff.workbook           # Excel model (then tools/recalc.ps1 to store Excel's own values in the file)
 python -m ff.readme             # this file
 python -m pytest
-cd dashboard && npm ci && npm run build && npm run start
+cd dashboard && npm ci && npm run build && npm run start   # the build first generates public/data/map.json from us-atlas
 ```
 
 ## Limits, stated plainly
