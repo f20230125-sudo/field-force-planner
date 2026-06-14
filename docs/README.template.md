@@ -2,6 +2,8 @@
 
 How many sales reps does a US launch need, and how should the country's counties be cut into territories so that every rep has about the same work? Built from the public NPI registry ({{registry.records|int}} records), Census and CDC data, with the sizing as a live-formula Excel model and the alignment as tested Python.
 
+**Live site:** https://field-force-planner.vercel.app
+
 > The README is generated: `python -m ff.readme` fills every number from `dashboard/public/data/headline.json`, and a test fails if this file is out of date.
 
 ## What it found
