@@ -1,0 +1,194 @@
+[
+ {
+  "id": "S1",
+  "franchise": "diabetes",
+  "capacity": {
+   "diabetes": [
+    8,
+    190
+   ],
+   "oncology": [
+    4,
+    190
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 24.0,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12.0,
+    "share": 0.25
+   },
+   "Primary care NP or PA": {
+    "calls": 6.0,
+    "share": 0.25
+   },
+   "Oncology specialist": {
+    "calls": 18.0,
+    "share": 0.6
+   }
+  }
+ },
+ {
+  "id": "S2",
+  "franchise": "oncology",
+  "capacity": {
+   "diabetes": [
+    8,
+    190
+   ],
+   "oncology": [
+    4,
+    190
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 24.0,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12.0,
+    "share": 0.25
+   },
+   "Primary care NP or PA": {
+    "calls": 6.0,
+    "share": 0.25
+   },
+   "Oncology specialist": {
+    "calls": 18.0,
+    "share": 0.6
+   }
+  }
+ },
+ {
+  "id": "S3",
+  "franchise": "diabetes",
+  "capacity": {
+   "diabetes": [
+    10,
+    200
+   ],
+   "oncology": [
+    4,
+    190
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 24.0,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12,
+    "share": 0.4
+   },
+   "Primary care NP or PA": {
+    "calls": 6,
+    "share": 0.1
+   },
+   "Oncology specialist": {
+    "calls": 18.0,
+    "share": 0.6
+   }
+  }
+ },
+ {
+  "id": "S4",
+  "franchise": "oncology",
+  "capacity": {
+   "diabetes": [
+    8,
+    190
+   ],
+   "oncology": [
+    3,
+    170
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 24.0,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12.0,
+    "share": 0.25
+   },
+   "Primary care NP or PA": {
+    "calls": 6.0,
+    "share": 0.25
+   },
+   "Oncology specialist": {
+    "calls": 18,
+    "share": 0.8
+   }
+  }
+ },
+ {
+  "id": "S5",
+  "franchise": "diabetes",
+  "capacity": {
+   "diabetes": [
+    6,
+    200
+   ],
+   "oncology": [
+    4,
+    190
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 36,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12.0,
+    "share": 0.25
+   },
+   "Primary care NP or PA": {
+    "calls": 6.0,
+    "share": 0.25
+   },
+   "Oncology specialist": {
+    "calls": 18.0,
+    "share": 0.6
+   }
+  }
+ },
+ {
+  "id": "S6",
+  "franchise": "oncology",
+  "capacity": {
+   "diabetes": [
+    8,
+    190
+   ],
+   "oncology": [
+    4,
+    190
+   ]
+  },
+  "plan": {
+   "Endocrinology": {
+    "calls": 24.0,
+    "share": 0.6
+   },
+   "Primary care physician": {
+    "calls": 12.0,
+    "share": 0.25
+   },
+   "Primary care NP or PA": {
+    "calls": 6.0,
+    "share": 0.25
+   },
+   "Oncology specialist": {
+    "calls": 12,
+    "share": 0.5
+   }
+  }
+ }
+]

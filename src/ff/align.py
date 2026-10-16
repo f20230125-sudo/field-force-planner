@@ -233,20 +233,27 @@ def improve(g: Graph, assign: list[int], t: int, target: float = 1.0, max_passes
     return assign
 
 
+def territory_weights(g: Graph, assign: list[int], t: int, real_weight: dict[str, float] | None = None) -> list[float]:
+    """Weight of each territory. With `real_weight`, a territory made of whole counties (the baseline) is weighed by the
+    real county weights rather than by the unit weights it was grown with."""
+    tw = [0.0] * t
+    for v, k in enumerate(assign):
+        if real_weight is None:
+            tw[k] += g.weight[v]
+        else:
+            c = g.county[v]
+            tw[k] += real_weight[c] / len(g.pieces[c])
+    return tw
+
+
 def metrics(g: Graph, assign: list[int], t: int, real_weight: dict[str, float] | None = None,
             states: dict[str, str] | None = None) -> dict:
     """Balance, compactness, contiguity. Weights are the real county weights when `real_weight` is given (the baseline
     treats a county as one node, so its pieces are not splittable and its territory weight is the sum of whole counties)."""
-    tw = [0.0] * t
     members: list[list[int]] = [[] for _ in range(t)]
     for v, k in enumerate(assign):
         members[k].append(v)
-        tw[k] += g.weight[v]
-    if real_weight is not None:
-        tw = [0.0] * t
-        for k in range(t):
-            for c in {g.county[v] for v in members[k]}:
-                tw[k] += real_weight[c] / len(g.pieces[c]) * sum(1 for v in members[k] if g.county[v] == c)
+    tw = territory_weights(g, assign, t, real_weight)
     arr = np.array(tw)
     dev = arr / arr.mean()
     comp = []
@@ -454,7 +461,11 @@ def main() -> int:
         ids = {r["k"]: r["id"] for r in cal}
         for r in cty:
             r["territory"] = ids[r["k"]]
+        t_all = max(res["assign"]) + 1
         out[key] = {"franchise": key, "reps": reps, "territories": t, "alpha": alpha, "metrics": res["metrics"],
+                    "regions": res["regions"],
+                    "weights": {"aligned": [round(x, 4) for x in territory_weights(res["graph"], res["assign"], t_all)],
+                                "baseline": [round(x, 4) for x in territory_weights(res["baseline_graph"], res["baseline"], t_all, weights)]},
                     "bridges": [{"a": a, "b": b, "km": round(d, 1)} for a, b, d in res["graph"].bridges]}
         for r in cal:
             r.pop("k")
