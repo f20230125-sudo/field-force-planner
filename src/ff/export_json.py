@@ -151,6 +151,7 @@ def export_all() -> dict:
             "targeted": _r(sum(x["targeted"] for x in s["segments"]), 0),
             "capacity": s["capacity"], "callsPerRepDay": s["callsPerRepDay"], "fieldDays": s["fieldDays"],
             "cvAligned": _r(m["cv"], 4), "cvBaseline": _r(b["cv"], 3),
+            "cvGrown": _r(a["metrics"]["before_local_search"]["cv"], 4),
             "within10": _r(m["within_10pct"], 3), "within25": _r(m["within_25pct"], 3),
             "baselineWithin25": _r(b["within_25pct"], 3), "baselineMax": _r(b["max_over_mean"], 1),
             "alignedMax": _r(m["max_over_mean"], 2), "alignedMin": _r(m["min_over_mean"], 2),
