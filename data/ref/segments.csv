@@ -1,0 +1,21 @@
+franchise,segment,tier,calls_per_year,targeted_share,taxonomy_code
+diabetes,Endocrinology,specialist,24,0.60,207RE0101X
+diabetes,Primary care physician,generalist,12,0.25,207Q00000X
+diabetes,Primary care physician,generalist,12,0.25,207QA0505X
+diabetes,Primary care physician,generalist,12,0.25,207QG0300X
+diabetes,Primary care physician,generalist,12,0.25,207R00000X
+diabetes,Primary care physician,generalist,12,0.25,207RG0300X
+diabetes,Primary care physician,generalist,12,0.25,208D00000X
+diabetes,Primary care NP or PA,generalist,6,0.25,363L00000X
+diabetes,Primary care NP or PA,generalist,6,0.25,363LA2200X
+diabetes,Primary care NP or PA,generalist,6,0.25,363LF0000X
+diabetes,Primary care NP or PA,generalist,6,0.25,363LP2300X
+diabetes,Primary care NP or PA,generalist,6,0.25,363LG0600X
+diabetes,Primary care NP or PA,generalist,6,0.25,363A00000X
+diabetes,Primary care NP or PA,generalist,6,0.25,363AM0700X
+oncology,Oncology specialist,specialist,18,0.60,207RX0202X
+oncology,Oncology specialist,specialist,18,0.60,207RH0003X
+oncology,Oncology specialist,specialist,18,0.60,207VX0201X
+oncology,Oncology specialist,specialist,18,0.60,2085R0001X
+oncology,Oncology specialist,specialist,18,0.60,2086X0206X
+oncology,Oncology specialist,specialist,18,0.60,2080P0207X

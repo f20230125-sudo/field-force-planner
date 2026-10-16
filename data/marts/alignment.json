@@ -1,0 +1,192 @@
+{
+ "diabetes": {
+  "franchise": "diabetes",
+  "reps": 1309.8132236842107,
+  "territories": 1310,
+  "alpha": 0.5,
+  "metrics": {
+   "aligned": {
+    "territories": 1310,
+    "mean_weight": 1.0,
+    "cv": 0.07536025012310346,
+    "min_over_mean": 0.5173507052768996,
+    "max_over_mean": 1.4816319464995156,
+    "within_10pct": 0.7290076335877863,
+    "within_25pct": 0.9961832061068703,
+    "mean_radius_km": 35.61638677415904,
+    "median_radius_km": 26.876760552724555,
+    "disconnected": 0,
+    "split_counties": 865,
+    "crossing_state_share": 0.30916030534351147,
+    "bridges": 8
+   },
+   "before_local_search": {
+    "territories": 1310,
+    "mean_weight": 1.0,
+    "cv": 0.22479649694307588,
+    "min_over_mean": 0.221599721904875,
+    "max_over_mean": 2.074284725099322,
+    "within_10pct": 0.332824427480916,
+    "within_25pct": 0.7564885496183206,
+    "mean_radius_km": 26.16290810173442,
+    "median_radius_km": 18.823616333148557,
+    "disconnected": 0,
+    "split_counties": 567,
+    "crossing_state_share": 0.233587786259542,
+    "bridges": 8
+   },
+   "baseline": {
+    "territories": 1310,
+    "mean_weight": 1.0,
+    "cv": 2.7402357702626876,
+    "min_over_mean": 0.0002869737927713543,
+    "max_over_mean": 62.20163258578598,
+    "within_10pct": 0.0366412213740458,
+    "within_25pct": 0.08778625954198473,
+    "mean_radius_km": 29.07680002809519,
+    "median_radius_km": 22.315172175492705,
+    "disconnected": 0,
+    "split_counties": 0,
+    "crossing_state_share": 0.15114503816793892,
+    "bridges": 8
+   }
+  },
+  "bridges": [
+   {
+    "a": "46102",
+    "b": "46007",
+    "km": 72.3
+   },
+   {
+    "a": "02282",
+    "b": "02170",
+    "km": 390.3
+   },
+   {
+    "a": "02063",
+    "b": "02020",
+    "km": 131.1
+   },
+   {
+    "a": "02066",
+    "b": "02282",
+    "km": 225.1
+   },
+   {
+    "a": "02158",
+    "b": "02050",
+    "km": 150.0
+   },
+   {
+    "a": "15001",
+    "b": "15003",
+    "km": 290.0
+   },
+   {
+    "a": "15005",
+    "b": "15003",
+    "km": 119.8
+   },
+   {
+    "a": "15007",
+    "b": "15003",
+    "km": 144.1
+   }
+  ]
+ },
+ "oncology": {
+  "franchise": "oncology",
+  "reps": 473.5657894736842,
+  "territories": 474,
+  "alpha": 0.5,
+  "metrics": {
+   "aligned": {
+    "territories": 474,
+    "mean_weight": 1.0,
+    "cv": 0.06809808478048782,
+    "min_over_mean": 0.42221615342066793,
+    "max_over_mean": 1.3355024637585846,
+    "within_10pct": 0.8839662447257384,
+    "within_25pct": 0.9957805907172996,
+    "mean_radius_km": 52.63616394770675,
+    "median_radius_km": 36.13354648123066,
+    "disconnected": 0,
+    "split_counties": 343,
+    "crossing_state_share": 0.4451476793248945,
+    "bridges": 8
+   },
+   "before_local_search": {
+    "territories": 474,
+    "mean_weight": 1.0,
+    "cv": 0.22205586237939431,
+    "min_over_mean": 0.3779411203904949,
+    "max_over_mean": 1.5193503207470167,
+    "within_10pct": 0.2679324894514768,
+    "within_25pct": 0.7151898734177216,
+    "mean_radius_km": 38.0192324976842,
+    "median_radius_km": 28.64696898263397,
+    "disconnected": 0,
+    "split_counties": 239,
+    "crossing_state_share": 0.350210970464135,
+    "bridges": 8
+   },
+   "baseline": {
+    "territories": 474,
+    "mean_weight": 1.0,
+    "cv": 2.0590533145815604,
+    "min_over_mean": 0.005695977413232812,
+    "max_over_mean": 16.890674846117378,
+    "within_10pct": 0.035864978902953586,
+    "within_25pct": 0.0949367088607595,
+    "mean_radius_km": 50.68085247521373,
+    "median_radius_km": 43.356168247723645,
+    "disconnected": 0,
+    "split_counties": 0,
+    "crossing_state_share": 0.41139240506329117,
+    "bridges": 8
+   }
+  },
+  "bridges": [
+   {
+    "a": "46102",
+    "b": "46007",
+    "km": 72.3
+   },
+   {
+    "a": "02282",
+    "b": "02170",
+    "km": 390.3
+   },
+   {
+    "a": "02063",
+    "b": "02020",
+    "km": 131.1
+   },
+   {
+    "a": "02066",
+    "b": "02282",
+    "km": 225.1
+   },
+   {
+    "a": "02158",
+    "b": "02050",
+    "km": 150.0
+   },
+   {
+    "a": "15005",
+    "b": "15003",
+    "km": 119.8
+   },
+   {
+    "a": "15001",
+    "b": "15009",
+    "km": 153.2
+   },
+   {
+    "a": "15007",
+    "b": "15003",
+    "km": 144.1
+   }
+  ]
+ }
+}
