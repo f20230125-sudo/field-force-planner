@@ -31,10 +31,10 @@ OUT = ROOT / "excel" / "Field-Force-Sizing-Model.xlsx"
 PROBE = ROOT / "excel" / "probe_scenarios.json"
 
 INK = "#1F2A33"
-ACCENT = "#6D4C9F"
+ACCENT = "#15302C"  # ink: the site keeps colour for the yellow of an assumption
 SLATE = "#5B6672"
 RULE = "#D9DEE3"
-INPUT_FILL = "#FFF6D6"
+INPUT_FILL = "#F8EBA9"  # the same yellow as the site: an assumption
 INPUT_FONT = "#1D4ED8"
 
 FIRST, LAST = 6, 56  # state rows on the States sheet (51)
@@ -126,8 +126,8 @@ def build(path: Path = OUT) -> Path:
     pct0 = f(num_format="0%", bottom=1, bottom_color=RULE)
     label = f(bold=True, font_color=SLATE)
     note = f(font_color=SLATE, text_wrap=True, valign="top")
-    inp = f(bg_color=INPUT_FILL, font_color=INPUT_FONT, border=1, border_color="#E6D9A8", bold=True, align="center")
-    inp_pct = f(bg_color=INPUT_FILL, font_color=INPUT_FONT, border=1, border_color="#E6D9A8", bold=True, align="center", num_format="0%")
+    inp = f(bg_color=INPUT_FILL, font_color=INPUT_FONT, border=1, border_color="#978429", bold=True, align="center")
+    inp_pct = f(bg_color=INPUT_FILL, font_color=INPUT_FONT, border=1, border_color="#978429", bold=True, align="center", num_format="0%")
     kpi = f(font_size=14, bold=True, font_color=ACCENT, num_format="#,##0.0")
     tot = f(bold=True, top=2, top_color=INK, num_format="#,##0")
     tot1 = f(bold=True, top=2, top_color=INK, num_format="#,##0.0")
