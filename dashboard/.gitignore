@@ -5,3 +5,6 @@ public/data/map.json
 # files the Next.js tooling can generate for coding assistants; not part of this project
 AGENTS.md
 CLAUDE.md
+
+.vercel
+.env*
