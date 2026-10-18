@@ -93,7 +93,7 @@ function LoadedMap({ map, counties, align, franchise, zoom }: Props & { map: Map
             ))}
           </g>
           <path className="hatch" d={hatched} />
-          <path className="cut" d={map.cut[franchise]} />
+          <path className="cut" d={map.cut[franchise] ?? ""} />
           <path className="st" d={map.states} />
           <path className="nation" d={map.nation} />
           {pick != null && <path className="sel" d={map.d[pick]} />}

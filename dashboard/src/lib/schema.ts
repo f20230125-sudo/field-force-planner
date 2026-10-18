@@ -1,12 +1,12 @@
 import { z } from "zod";
 
 // One schema per file in public/data. The page is built from these, so a field that is missing, renamed or the
-// wrong type fails the build with the file name, instead of printing "undefined" on the page.
+// wrong type fails the build with the file name, instead of printing "undefined" on the page. Only the server reads
+// these; the browser gets the validated result, so nothing here may be imported by a client component except as a type.
+
+export type { Franchise } from "./franchises";
 
 const num = z.number();
-const FRANCHISES = ["diabetes", "oncology"] as const;
-export type Franchise = (typeof FRANCHISES)[number];
-export const franchiseKeys = FRANCHISES;
 
 const Frn = z.object({
   label: z.string(),
@@ -139,17 +139,6 @@ export const Meta = z.object({
 });
 export type Meta = z.infer<typeof Meta>;
 
-export const MapShapes = z.object({
-  viewBox: z.tuple([num, num, num, num]),
-  ids: z.array(z.string()),
-  d: z.array(z.string()),
-  row: z.array(num),
-  cut: z.object({ diabetes: z.string(), oncology: z.string() }),
-  states: z.string(),
-  nation: z.string(),
-  stateBoxes: z.record(z.string(), z.tuple([num, num, num, num])),
-});
-
 export type MapData = {
   viewBox: [number, number, number, number];
   /** One path per county shape, in the order of `ids`. */
@@ -157,7 +146,8 @@ export type MapData = {
   d: string[];
   /** Index into Counties.order for each shape, or -1 when the shape has no row (it is drawn in the colour of a sibling). */
   row: number[];
-  cut: { diabetes: string; oncology: string };
+  /** The oncology cut lines are a separate file, fetched on first use (see `parseCut`). */
+  cut: { diabetes: string; oncology?: string };
   states: string;
   nation: string;
   /** Bounding box of each state's shapes, for zooming. */

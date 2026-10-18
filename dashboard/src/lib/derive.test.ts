@@ -3,7 +3,10 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { biggestGroup, defaultPlan, densityRange, ledger, maxColourSlot, planReps, profile, readout, registrySteps, samePlan, splitStats, tickCount, topShare } from "./derive";
 import { realDataset } from "./fixtures";
+import { geoPath } from "d3-geo";
+import { feature } from "topojson-client";
 import { buildMap } from "../../scripts/build-map.mjs";
+import { parseCut, parseMapData } from "./mapData";
 
 const d = realDataset();
 
@@ -118,7 +121,65 @@ describe("the generated map", () => {
     expect(Object.keys(map.stateBoxes)).toHaveLength(51);
   });
   it("has a cut line for each franchise, and more of it for the finer alignment", () => {
-    expect(map.cut.diabetes.length).toBeGreaterThan(map.cut.oncology.length);
+    expect(map.cut.diabetes.length).toBeGreaterThan(map.cut.oncology!.length);
     expect(map.states.length).toBeGreaterThan(1000);
   });
+  it("writes every county's points where d3-geo's own whole-pixel path puts them (within a pixel), in about half the bytes", () => {
+    const reference = geoPath().digits(0);
+    const features = (feature(atlas, atlas.objects.counties) as unknown as { features: { id: string }[] }).features;
+    const byId = new Map(features.map((f) => [String(f.id), f]));
+    const theirPath = (id: string) => reference(byId.get(id) as never) ?? "";
+    let ours = 0;
+    let theirs = 0;
+    let worst = 0;
+    map.ids.forEach((id: string, i: number) => {
+      const want = absolutePoints(theirPath(id));
+      const got = absolutePoints(map.d[i]);
+      ours += map.d[i].length;
+      theirs += theirPath(id).length;
+      // A step that rounds to nothing is dropped, so ours may hold fewer points; every point of ours is on theirs.
+      for (const p of got) worst = Math.max(worst, Math.min(...want.map((q) => Math.max(Math.abs(p[0] - q[0]), Math.abs(p[1] - q[1])))));
+    });
+    expect(worst).toBeLessThanOrEqual(1);
+    expect(ours).toBeLessThan(theirs * 0.55);
+  });
 });
+
+describe("the map files the browser fetches", () => {
+  const dir = path.join(process.cwd(), "public", "data");
+  it("map.json passes the checks the page applies and holds only the diabetes cut lines", () => {
+    const m = parseMapData(JSON.parse(fs.readFileSync(path.join(dir, "map.json"), "utf-8")));
+    expect(m.ids).toHaveLength(3142);
+    expect(m.cut.oncology).toBeUndefined();
+    expect(m.cut.diabetes.length).toBeGreaterThan(1000);
+  });
+  it("cut-oncology.json is the oncology cut line, and a malformed file is refused", () => {
+    const d = parseCut(JSON.parse(fs.readFileSync(path.join(dir, "cut-oncology.json"), "utf-8")));
+    expect(d.startsWith("M")).toBe(true);
+    expect(() => parseCut({})).toThrow();
+    expect(() => parseMapData({ viewBox: [0, 0, 1, 1] })).toThrow();
+  });
+});
+
+/** Reads M, L, l and z path data (d3-geo writes M and L, ours M and l) into absolute points. */
+function absolutePoints(d: string): [number, number][] {
+  const out: [number, number][] = [];
+  let x = 0;
+  let y = 0;
+  for (const part of d.match(/[MLlzZ][^MLlzZ]*/g) ?? []) {
+    const nums = (part.slice(1).match(/-?\d+/g) ?? []).map(Number);
+    if (part[0] === "M" || part[0] === "L") {
+      for (let k = 0; k < nums.length; k += 2) {
+        [x, y] = [nums[k], nums[k + 1]];
+        out.push([x, y]);
+      }
+    } else if (part[0] === "l") {
+      for (let k = 0; k < nums.length; k += 2) {
+        x += nums[k];
+        y += nums[k + 1];
+        out.push([x, y]);
+      }
+    }
+  }
+  return out;
+}
